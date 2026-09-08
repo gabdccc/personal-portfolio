@@ -50,6 +50,7 @@ a {
     align-items: center;
 
     border-radius: 54px;
+    min-height: 54px;
 }
 
 .header .left span,
@@ -82,14 +83,28 @@ a {
     gap: 1.5rem;
 }
 
+.header .right {
+    position: relative;
+}
+.header .right .emeyl {
+    overflow: hidden;
+}
 .header .right .emeyl a {
+    position: relative;
     cursor: default;
+
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
     font-size: 0.9rem;
 
     display: flex;
     align-items: center;
+
+    width: 120px;
+    transition: width 0.3s ease;
+}
+.header .right .emeyl a:hover {
+    width: 265px;
 }
 .header .right .emeyl span {
     cursor: pointer;
@@ -101,8 +116,7 @@ a {
 
     transition: opacity 0.2s ease, transform 0.3s ease;
 }
-
-.header .right .emeyl span::before {
+.header .right .emeyl a::before {
     position: absolute;
     content: "";
 
@@ -119,7 +133,31 @@ a {
     transition: width 0.5s ease-in-out, opacity 0.8s ease-in-out;
 }
 
-.header .right .emeyl span:hover::before {
-    width: calc(100% - 8px);
+.header .right .emeyl a:hover::before {
+    width: calc(100% - 4rem);
     opacity: 1;
+}
+
+.header .right .github-logo {
+    position: absolute;
+    left: -50px;
+}
+.header .right .github-logo .github-info {
+    pointer-events: none;
+    position: absolute;
+
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: darkgray;
+
+    padding: 0.4rem 1rem;
+    border-radius: 12px;
+
+    text-wrap: nowrap;
+
+    font-family: "Urbanist", sans-serif;
+    font-style: italic;
+    font-weight: 500;
 }
