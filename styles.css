@@ -10,6 +10,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    color: #582F0E;
 }
 
 a {
@@ -21,7 +23,7 @@ a {
     margin: 1rem;
     padding: 0.5rem 0;
 
-    background-color: grey;
+    background-color: #c2c5aa;
     border-radius: 64px;
 
     display: flex;
@@ -45,7 +47,7 @@ a {
 
 .header .left,
 .header .right {
-    background-color: red;
+    background-color: #dda15e;
     display: flex;
     align-items: center;
 
@@ -59,7 +61,8 @@ a {
     font-size: 1.4rem;
     font-weight: 500;
 
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
 }
 
 .header img {
@@ -82,6 +85,42 @@ a {
     display: flex;
     gap: 1.5rem;
 }
+.header .middle li {
+    position: relative;
+    cursor: pointer;
+
+    color: #936639;
+    
+    transition: color 0.4s ease, transform 0.15s ease, padding 0.3s ease;
+}
+.header .middle li::before {
+    position: absolute;
+    content: "";
+
+    bottom: -0.4rem;
+    left: 50%;
+    opacity: 0;
+
+    transform: translateX(-50%);
+
+    width: 1px;
+    height: 2px;
+
+    border-radius: 128px;
+
+    background-color: #936639;
+    transition: width 0.5s ease, opacity 0.7s ease, background-color 0.2s ease;
+}
+.header .middle li:hover::before {
+    background-color: #582F0E;
+    opacity: 1;
+    width: calc(100% - 3.8rem);
+}
+.header .middle li:hover {
+    color: #582f0e;
+    padding: 0 2rem;
+    transform: scale(1.2);
+}
 
 .header .right {
     position: relative;
@@ -100,11 +139,11 @@ a {
     display: flex;
     align-items: center;
 
-    width: 120px;
+    width: 8rem;
     transition: width 0.3s ease;
 }
 .header .right .emeyl a:hover {
-    width: 265px;
+    width: 19rem;
 }
 .header .right .emeyl span {
     cursor: pointer;
@@ -124,16 +163,17 @@ a {
     left: 50%;
     transform: translateX(-50%);
 
-    background-color: black;
+    background-color: #936639;
     width: 0px;
     opacity: 0;
     height: 2px;
     border-radius: 128px;
 
-    transition: width 0.5s ease-in-out, opacity 0.8s ease-in-out;
+    transition: width 0.8s ease, opacity 0.8s ease-in-out, background-color 0.2s ease;
 }
 
 .header .right .emeyl a:hover::before {
+    background-color: #582f0e;
     width: calc(100% - 4rem);
     opacity: 1;
 }
