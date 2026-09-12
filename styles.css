@@ -219,6 +219,8 @@ main {
 .left-content,
 .right-content {
     width: 50%;
+    min-height: calc(100dvh - 6.5rem);
+    margin-top: 6.5rem;
     
     display: flex;
     justify-content: center;
@@ -226,10 +228,76 @@ main {
 }
 .hero img {
     width: 100%;
-    max-width: 600px;
+    max-width: 625px;
     height: auto;
 
     object-fit: contain;
 
     border-radius: 24px;
+}
+.right-content {
+    font-family: "Google Sans", sans-serif; 
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    align-items: flex-start;
+}
+.right-content h1 {
+    width: 100%;
+
+    line-height: 2rem;
+    font-size: 2.5rem;
+}
+.right-content h2 {
+    width: 100%;
+
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.right-content p {
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.stack .stack_title {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.stack ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.stack li {
+    font-family: "Roboto Mono", monospace;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-weight: 800;
+}
+.stack li img {
+    width: 64px;
+    height: 32px;
+    border-radius: 999px;
+}
+.stack li:nth-child(1) img {
+    background-color: #E8D0CA;
+}
+.stack li:nth-child(2) img {
+    background-color: #cadbe8;
+}
+.stack li:nth-child(3) img {
+    background-color: #f37220;
 }
