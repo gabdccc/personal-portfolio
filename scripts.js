@@ -1,27 +1,23 @@
 const emeylContain = document.querySelector(".emeyl-text");
 const email = document.querySelector(".email");
+
+const defaultEmail = document.createElement("span");
+defaultEmail.className = "default-email";
+defaultEmail.textContent = "Email";
 const fullEmail = document.createElement("span");
 fullEmail.className = "full-email";
 fullEmail.textContent = "adsasdasd@gmail.com";
 
-function defaultEmail() {
-  const defaultEmail = document.createElement("span");
-  defaultEmail.className = "default-email";
-  defaultEmail.textContent = "Email";
+emeylContain.appendChild(defaultEmail);
 
-  emeylContain.prepend(defaultEmail);
-}
-defaultEmail();
 email.addEventListener("mouseenter", () => {
-  const emailTemp = document.querySelector(".default-email");
+  defaultEmail.remove();
   emeylContain.appendChild(fullEmail);
-  emailTemp.remove();
 });
 
 email.addEventListener("mouseleave", () => {
-  const emailTemp = document.querySelector(".full-email");
-  emailTemp.remove();
-  defaultEmail();
+  fullEmail.remove();
+  emeylContain.appendChild(defaultEmail);
 });
 
 const githubLogo = document.querySelector(".github-logo");
