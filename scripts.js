@@ -22,12 +22,10 @@ email.addEventListener("mouseenter", () => {
 email.addEventListener("mouseleave", () => {
   clearTimeout(timeOutTimer);
 
-  testOne = false;
-
   timeOutTimer = setTimeout(() => {
     fullEmail.remove();
     emeylContain.appendChild(defaultEmail);
-  }, 320);
+  }, 350);
 });
 
 const githubLogo = document.querySelector(".github-logo");
