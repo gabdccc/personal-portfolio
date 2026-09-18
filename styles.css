@@ -254,7 +254,7 @@ main .hero .right-content h1 {
     width: 100%;
 
     line-height: 2rem;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
 }
 main .hero .right-content h2 {
     width: 100%;
@@ -311,16 +311,20 @@ main .hero .right-content .stack li:nth-child(3) img {
 
 
 main .hero .right-content .important-btn {
-    margin-top: 3rem;
+    margin-top: 6rem;
     display: flex;
+    align-items: center;
     gap: 2rem;
 
     font-family: "Google Sans", sans-serif; 
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 800;
 }
 main .hero .right-content .important-btn a {
     padding: 0.6rem 1.2rem;
     border-radius: 4px;
     background-color: #f37220;
+}
+main .hero .right-content .important-btn .contact a {
+    font-size: 2rem;
 }
