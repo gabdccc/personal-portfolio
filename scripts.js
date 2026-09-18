@@ -8,16 +8,26 @@ const fullEmail = document.createElement("span");
 fullEmail.className = "full-email";
 fullEmail.textContent = "adsasdasd@gmail.com";
 
+let timeOutTimer;
+
 emeylContain.appendChild(defaultEmail);
 
 email.addEventListener("mouseenter", () => {
+  clearTimeout(timeOutTimer);
+
   defaultEmail.remove();
   emeylContain.appendChild(fullEmail);
 });
 
 email.addEventListener("mouseleave", () => {
-  fullEmail.remove();
-  emeylContain.appendChild(defaultEmail);
+  clearTimeout(timeOutTimer);
+
+  testOne = false;
+
+  timeOutTimer = setTimeout(() => {
+    fullEmail.remove();
+    emeylContain.appendChild(defaultEmail);
+  }, 320);
 });
 
 const githubLogo = document.querySelector(".github-logo");
