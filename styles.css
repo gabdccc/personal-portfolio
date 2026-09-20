@@ -352,10 +352,10 @@ main .hero .right-content .stack .hidedesc.reveal {
 }
 
 main .hero .right-content .important-btn {
-    margin-top: 4rem;
+    margin-top: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     font-family: "Google Sans", sans-serif; 
     font-size: 1.2rem;
