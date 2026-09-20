@@ -316,6 +316,7 @@ main .hero .right-content .stack ul {
     gap: 0.8rem;
 }
 main .hero .right-content .stack li {
+    user-select: none;
     font-family: "Roboto Mono", monospace;
 
     display: flex;
@@ -338,7 +339,17 @@ main .hero .right-content .stack li:nth-child(2) img {
 main .hero .right-content .stack li:nth-child(3) img {
     background-color: var(--default-logo-js);
 }
-
+main .hero .right-content .stack .hidedesc {
+    margin-left: -0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, margin-left 0.3s ease;
+}
+main .hero .right-content .stack .hidedesc.reveal {
+    margin-left: 0rem;
+    opacity: 1;
+    pointer-events: none;
+}
 
 main .hero .right-content .important-btn {
     margin-top: 4rem;
