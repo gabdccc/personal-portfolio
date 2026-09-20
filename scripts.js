@@ -40,3 +40,16 @@ githubLogo.addEventListener("mouseenter", () => {
 githubLogo.addEventListener("mouseleave", () => {
   githubInfo.remove();
 });
+
+const stacks = document.querySelectorAll(".stack-span");
+
+stacks.forEach((stack) => {
+  stack.addEventListener("mouseenter", () => {
+    const desc = stack.nextElementSibling;
+    desc.classList.add("reveal");
+  });
+  stack.addEventListener("mouseleave", () => {
+    const desc = stack.nextElementSibling;
+    desc.classList.remove("reveal");
+  });
+});
