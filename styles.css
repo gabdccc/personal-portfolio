@@ -8,12 +8,28 @@
     change this and the colors and some things to custom property later
     */
 
+:root {
+    --default-text-color: #fffcf2;
+    --default-navigation-background-color: #eb5e28;
+    --default-navigation-pill-color: #252422;
+
+    --shadow-color: rgba(235, 94, 40, 0.35);
+    --shadow-color-two: rgba(37, 36, 34, 0.35);
+
+    --default-navigation-text-color-hover: wheat;
+    --default-navigation-line-color-before: red;
+
+    --default-main-background-color: #252422;
+    --default-logo-html: #E8D0CA;
+    --default-logo-css: #cadbe8;
+    --default-logo-js: #f37220;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 
-    color: #582F0E;
+    color: var(--default-text-color);
 }
 
 a {
@@ -28,9 +44,9 @@ nav {
     margin: 1rem;
     padding: 0.5rem 0;
 
-    background-color: #c2c5aa;
+    background-color: var(--default-navigation-background-color);
     border-radius: 64px;
-    box-shadow: 0px 3px 5px 1px rgba(78, 42, 12, 0.35);
+    box-shadow: 0px 0px 2px 1px var(--shadow-color);
 
     display: flex;
     align-items: center;
@@ -54,7 +70,7 @@ nav .right {
 
 nav .left,
 nav .right {
-    background-color: #dda15e;
+    background-color: var(--default-navigation-pill-color);
     display: flex;
     align-items: center;
 
@@ -65,7 +81,7 @@ nav .left img {
     width: 54px; 
     height: 54px;
 }
-nav .left span,
+nav .left a,
 .header .right .emeyl {
     font-family: "Urbanist", sans-serif;
     font-size: 1.4rem;
@@ -73,16 +89,24 @@ nav .left span,
 
     padding: 0.5rem 1rem;
     overflow: hidden;
+    transition: font-weight 0.8s ease, transform 0.15s ease, padding 0.3s ease;
+}
+nav .left a:hover {
+    font-weight: 1000;
+    transform: scale(1.1);
+    padding: 0.5rem 3rem;
 }
 
 nav img {
     display: block;
     border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px var(--shadow-color-two);
 
-    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, box-shadow 1s ease;
 }
 nav img:hover {
     transform: rotate(1080deg) scale(1.3);
+    box-shadow: 0px 0px 25px 1px var(--shadow-color);
 }
 
 nav .middle ul {
@@ -99,9 +123,10 @@ nav .middle li {
     position: relative;
     cursor: pointer;
 
-    color: #936639;
+    color: var(--default-text-color);
+    font-weight: 400;
     
-    transition: color 0.4s ease, transform 0.15s ease, padding 0.3s ease;
+    transition: color 0.4s ease, transform 0.15s ease, padding 0.3s ease, font-weight 0.8s ease;
 }
 nav .middle li::before {
     position: absolute;
@@ -118,18 +143,20 @@ nav .middle li::before {
 
     border-radius: 128px;
 
-    background-color: #936639;
+    background-color: var(--default-text-color);
     transition: width 0.5s ease, opacity 0.7s ease, background-color 0.2s ease;
 
-    box-shadow: 0px 3px 5px 1px rgba(78, 42, 12, 0.25);
+    box-shadow: 0px 3px 5px 1px var(--shadow-color-two);
 }
 nav .middle li:hover::before {
-    background-color: #582F0E;
+    background-color: var(--default-navigation-pill-color);
     opacity: 1;
     width: calc(100% - 3.8rem);
 }
 nav .middle li:hover {
-    color: #582f0e;
+    color: var(--default-navigation-pill-color);
+    font-weight: 1000;
+
     padding: 0 2rem;
     transform: scale(1.2);
 }
@@ -170,16 +197,17 @@ nav .right .emeyl a::before {
     left: 50%;
     transform: translateX(-50%);
 
-    background-color: #936639;
+    background-color: var(--default-text-color);
     width: 0px;
     opacity: 0;
     height: 2px;
     border-radius: 128px;
 
-    transition: width 0.6s ease, opacity 0.8s ease-in-out, background-color 0.2s ease;
+    transition: width 0.6s ease, opacity 0.6s ease-in-out, background-color 0.2s ease;
 }
 nav .right .emeyl a:hover::before {
-    background-color: #582f0e;
+    background-color: var(--default-navigation-background-color);
+    box-shadow: 0px 1px 5px 1px var(--shadow-color);
     width: calc(100% - 5.5rem);
     opacity: 1;
 }
@@ -195,11 +223,11 @@ nav .right .github-logo .github-info {
     pointer-events: none;
     position: absolute;
 
-    bottom: -50px;
+    bottom: -55px;
     left: 50%;
     transform: translate(-50%);
 
-    background-color: #dda15e;
+    background-color: var(--default-navigation-background-color);
 
     padding: 0.4rem 1rem;
     border-radius: 12px;
@@ -210,12 +238,12 @@ nav .right .github-logo .github-info {
     font-style: italic;
     font-weight: 500;
 
-    box-shadow: 0px 0px 15px 1px rgba(78, 42, 12, 0.25);
+    box-shadow: 0px 0px 15px 1px var(--shadow-color);
 }
 
 
 main {
-    background-color: red;
+    background-color: var(--default-main-background-color);
 }
 main .hero {
     min-height: 100dvh;
@@ -262,16 +290,18 @@ main .hero .right-content h2 {
     font-size: 1.8rem;
     font-weight: 800;
 }
+main .hero .right-content hr {
+    width: calc(100% - 4rem);
+}
 main .hero .right-content p {
-    width: 100%;
+    width: calc(100% - 4rem);
 
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
 }
 
 main .hero .right-content .stack {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -300,18 +330,18 @@ main .hero .right-content .stack li img {
     border-radius: 999px;
 }
 main .hero .right-content .stack li:nth-child(1) img {
-    background-color: #E8D0CA;
+    background-color: var(--default-logo-html);
 }
 main .hero .right-content .stack li:nth-child(2) img {
-    background-color: #cadbe8;
+    background-color: var(--default-logo-css);
 }
 main .hero .right-content .stack li:nth-child(3) img {
-    background-color: #f37220;
+    background-color: var(--default-logo-js);
 }
 
 
 main .hero .right-content .important-btn {
-    margin-top: 6rem;
+    margin-top: 4rem;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -323,7 +353,8 @@ main .hero .right-content .important-btn {
 main .hero .right-content .important-btn a {
     padding: 0.6rem 1.2rem;
     border-radius: 4px;
-    background-color: #f37220;
+    background-color: var(--default-navigation-background-color);
+    box-shadow: 0px 0px 2px 1px var(--shadow-color);
 }
 main .hero .right-content .important-btn .contact a {
     font-size: 2rem;
