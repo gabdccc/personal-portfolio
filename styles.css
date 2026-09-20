@@ -313,7 +313,7 @@ main .hero .right-content .stack .stack_title {
 main .hero .right-content .stack ul {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.8rem;
 }
 main .hero .right-content .stack li {
     font-family: "Roboto Mono", monospace;
@@ -347,7 +347,7 @@ main .hero .right-content .important-btn {
     gap: 2rem;
 
     font-family: "Google Sans", sans-serif; 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 800;
 }
 main .hero .right-content .important-btn a {
