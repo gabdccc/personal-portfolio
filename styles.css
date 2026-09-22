@@ -16,13 +16,12 @@
     --shadow-color: rgba(235, 94, 40, 0.35);
     --shadow-color-two: rgba(37, 36, 34, 0.35);
 
-    --default-navigation-text-color-hover: wheat;
-    --default-navigation-line-color-before: red;
-
     --default-main-background-color: #252422;
     --default-logo-html: #E8D0CA;
     --default-logo-css: #cadbe8;
     --default-logo-js: #f37220;
+
+    --default-button-highlight: #EC6B38;
 }
 * {
     padding: 0;
@@ -362,7 +361,7 @@ main .hero .right-content .stack .hidedesc.reveal {
     pointer-events: none;
 }
 
-main .hero .right-content .important-btn {
+main .hero .right-content .stack .important-btn {
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
@@ -372,12 +371,32 @@ main .hero .right-content .important-btn {
     font-size: 1.2rem;
     font-weight: 800;
 }
-main .hero .right-content .important-btn a {
+main .hero .right-content .stack .important-btn a {
+    display: inline-block;
+    font-weight: 400;
+
     padding: 0.6rem 1.2rem;
+
     border-radius: 4px;
+
     background-color: var(--default-navigation-background-color);
     box-shadow: 0px 0px 2px 1px var(--shadow-color);
+
+    transition: 
+        transform 0.3s ease, 
+        margin 0.3s ease, 
+        padding 0.3s ease, 
+        font-weight 0.3s ease, 
+        background-color 0.3s ease;
 }
 main .hero .right-content .important-btn .contact a {
     font-size: 2rem;
+}
+main .hero .right-content .stack .important-btn a:hover {
+    transform: scale(1.15);
+    
+    font-weight: 1000;
+    padding: 0.6rem 1.4rem;
+    margin: 0rem 1rem;
+    background-color: var(--default-button-highlight);
 }
