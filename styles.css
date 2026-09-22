@@ -31,6 +31,10 @@
     color: var(--default-text-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     color: inherit;
     text-decoration: none;
