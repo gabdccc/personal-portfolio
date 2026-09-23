@@ -442,3 +442,40 @@ main .about {
     text-align: center;
     font-family: "Google Sans", sans-serif; 
 }
+
+
+.aboutref {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.firsttwo {
+    display: flex;
+    justify-content: center;
+}
+.first, .two {
+    display: flex;
+    justify-content: center;
+}
+.first {
+    width: 60%;
+    background-color: red;
+}
+.two {
+    width: 40%;
+    background-color: maroon;
+}
+.firsttwo img {
+    width: 80%;
+}
+.third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: orange;
+}
+.third img{
+    width: 12%;
+}
