@@ -23,3 +23,15 @@ stacks.forEach((stack) => {
     desc.classList.remove("reveal");
   });
 });
+
+const email = document.querySelector(".email");
+const origEmail = email.textContent;
+
+email.addEventListener("mouseenter", () => {
+  email.textContent = `${origEmail}@outlook.com`;
+  githubLogo.style.display = "none";
+});
+email.addEventListener("mouseleave", () => {
+  email.textContent = origEmail;
+  githubLogo.style.display = "flex";
+});
