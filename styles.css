@@ -190,7 +190,7 @@ nav .right .emailContainer {
 
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 nav .right .emailContainer .email {
     user-select: auto;
@@ -200,21 +200,19 @@ nav .right .emailContainer .email {
     padding: 0 0.2rem;
 
     font-family: "Urbanist", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
 
     transition: 
-        font-weight 0.7s ease,
+        font-weight 0.5s ease,
         transform 0.15s ease, 
         padding 0.3s ease, 
-        letter-spacing 0.2s ease, 
         color 0.3s ease;
 }
 nav .right .emailContainer .email:hover {
     padding: 0 1.2rem;
 
     font-weight: 1000;
-    letter-spacing: 0.08rem;
 
     transform: scale(1.1);
 }
