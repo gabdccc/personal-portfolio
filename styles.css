@@ -445,35 +445,60 @@ main .about {
 .aboutref {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100dvh;
+
+    font-family: "Google Sans", sans-serif; 
+}
+.topAbout {
+    margin: 7rem 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.topAbout h2 {
+    font-size: 2rem;
+}
+.topAbout h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    width: 60%;
+    font-style: italic;
 }
 
-.firsttwo {
+.firstAbout {
     display: flex;
     justify-content: center;
 }
-.first, .two {
+.firstAbout .first, 
+.firstAbout .second {
     display: flex;
     justify-content: center;
 }
-.first {
+.firstAbout .first {
+    flex-direction: column;
     width: 60%;
     background-color: red;
+    align-items: center;
 }
-.two {
+.firstAbout .first p {
+    text-align: left;
+    text-indent: 2rem;
+    width: 90%;
+    font-size: 1.2rem;
+
+    margin-bottom: 1rem;
+}
+.firstAbout .second {
     width: 40%;
     background-color: maroon;
 }
-.firsttwo img {
-    width: 80%;
-}
-.third {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    background-color: orange;
-}
-.third img{
-    width: 12%;
+.firstAbout img {
+    width: 95%;
+    padding: 0.5rem;
+    border-radius: 24px;
 }
